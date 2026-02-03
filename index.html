@@ -3,42 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IscoTech Academy | Empowering Your Digital Future</title>
+    <title>IscoTech Academy | Homa Bay</title>
     <style>
-        :root { --navy: #000033; --gold: #FFD700; --white: #ffffff; --glass: rgba(255, 255, 255, 0.1); }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: var(--navy); color: var(--white); margin: 0; padding: 0; }
+        :root { --navy: #000033; --gold: #FFD700; --white: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--navy); color: var(--white); margin: 0; padding: 0; text-align: center; }
         
-        /* Premium Header */
         header { 
-            background: linear-gradient(rgba(0,0,51,0.85), rgba(0,0,51,0.85)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'); 
-            background-size: cover; background-position: center; padding: 100px 20px; text-align: center; border-bottom: 8px solid var(--gold);
+            background: linear-gradient(rgba(0,0,51,0.8), rgba(0,0,51,0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'); 
+            padding: 70px 20px; border-bottom: 6px solid var(--gold);
         }
-        .motto { color: var(--gold); font-style: italic; font-size: 1.2em; letter-spacing: 1px; margin-top: 10px; }
-        h1 { font-size: 3em; margin: 0; text-transform: uppercase; color: var(--white); text-shadow: 3px 3px 6px #000; }
+        h1 { color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .motto { font-style: italic; color: var(--gold); margin-top: 5px; }
 
-        .container { padding: 30px 15px; max-width: 900px; margin: auto; }
-        .card { background: var(--glass); border: 1px solid rgba(255, 215, 0, 0.3); padding: 25px; border-radius: 20px; margin-bottom: 30px; backdrop-filter: blur(10px); }
-        h2 { color: var(--gold); border-left: 5px solid var(--gold); padding-left: 15px; text-transform: uppercase; font-size: 1.5em; }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255, 215, 0, 0.3); padding: 20px; border-radius: 15px; margin-bottom: 20px; backdrop-filter: blur(5px); }
+        
+        .location-badge { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 50px; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        
+        .contact-btn { background: rgba(255,215,0,0.1); color: var(--gold); padding: 12px; border: 1px solid var(--gold); border-radius: 8px; text-decoration: none; display: block; margin: 10px 0; font-weight: bold; transition: 0.3s; }
+        .contact-btn:hover { background: var(--gold); color: var(--navy); }
+        
+        .cta-enroll { background: linear-gradient(45deg, #FFD700, #FFA500); color: var(--navy); padding: 20px; border: none; border-radius: 12px; font-weight: bold; font-size: 1.3em; cursor: pointer; width: 100%; margin-top: 10px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(255,215,0,0.3); }
 
-        /* Homa Bay B2 Location */
-        .location-tag { background: var(--gold); color: var(--navy); padding: 15px; border-radius: 50px; font-weight: bold; text-align: center; margin: -50px auto 30px; width: 80%; position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
-
-        /* Contact Hub */
-        .contact-hub { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
-        .contact-hub a { color: var(--white); text-decoration: none; border: 1px solid var(--gold); padding: 12px 20px; border-radius: 10px; transition: 0.3s; background: rgba(0,0,0,0.3); }
-        .contact-hub a:hover { background: var(--gold); color: var(--navy); font-weight: bold; }
-
-        /* Fees Table */
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255,215,0,0.2); }
-        th { color: var(--gold); text-transform: uppercase; font-size: 0.8em; }
-
-        .cta-button { background: linear-gradient(45deg, #FFD700, #FFA500); color: var(--navy); padding: 20px; border: none; border-radius: 15px; font-weight: bold; font-size: 1.5em; cursor: pointer; display: block; width: 100%; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,215,0,0.4); }
-
-        /* Modal Portal */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-        .modal-content { background: #fff; color: #222; margin: 10% auto; padding: 30px; border-radius: 25px; width: 85%; max-width: 450px; }
-        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; }
+        /* Enrollment Pop-up */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
+        .modal-content { background: #ffffff; color: #222; margin: 5% auto; padding: 30px; width: 85%; max-width: 450px; border-radius: 20px; text-align: left; box-shadow: 0 5px 30px rgba(0,0,0,0.5); }
+        label { font-weight: bold; display: block; margin-top: 15px; color: var(--navy); }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 2px solid #eee; border-radius: 10px; box-sizing: border-box; font-size: 16px; }
     </style>
 </head>
 <body>
@@ -49,66 +40,56 @@
 </header>
 
 <div class="container">
-    <div class="location-tag">
-        📍 Located at B2, Homa Bay Town
-    </div>
+    <div class="location-badge">📍 B2, Homa Bay Town</div>
 
-    <div class="contact-hub">
-        <a href="https://wa.me/254746939408">WhatsApp Us</a>
-        <a href="tel:+254746939408">Call Registrar</a>
-        <a href="mailto:isco53078@gmail.com">Email Us</a>
+    <div class="card">
+        <h2>Our ICT Services</h2>
+        <p>System Installations | Software Activation | Laptop Repair | Networking | Graphic Design</p>
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/254746939408" class="contact-btn">WhatsApp Us</a>
+            <a href="tel:+254746939408" class="contact-btn">Call Registrar</a>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Expert ICT Services</h2>
-        <ul style="list-style-type: '💎 '; padding-left: 20px;">
-            <li>OS Installation & Licensing (Win 10/11)</li>
-            <li>MS Office & Software Activation</li>
-            <li>Adobe Suite & Graphics Tools Setup</li>
-            <li>Hardware Maintenance & Laptop Repair</li>
-            <li>Networking & Internet Security</li>
-        </ul>
+        <h2>Available Courses</h2>
+        <p>Web Development | Comp Maintenance | Networking</p>
+        <p style="color:var(--gold); font-weight:bold;">🕒 Daytime Classes: 10AM - 12PM</p>
     </div>
 
-    <div class="card">
-        <h2>Short Course Programs</h2>
-        <table>
-            <tr><th>Unit</th><th>Fees (Ksh)</th></tr>
-            <tr><td>Web Design & Hosting</td><td>12,000/-</td></tr>
-            <tr><td>Computer Maintenance</td><td>8,500/-</td></tr>
-            <tr><td>Networking Essentials</td><td>10,000/-</td></tr>
-        </table>
-        <p style="margin-top:20px; color: var(--gold);">🕒 Sessions: 10:00 AM — 12:00 PM (Daily)</p>
-    </div>
-
-    <button class="cta-button" id="regBtn">Enroll Now</button>
+    <button class="cta-enroll" id="openForm">Start Enrollment</button>
 </div>
 
 <div id="enrollModal" class="modal">
     <div class="modal-content">
-        <span id="close" style="float:right; cursor:pointer; font-size:30px;">&times;</span>
-        <h2 style="color:var(--navy); border:none; margin:0;">Student Portal</h2>
-        <p style="font-size: 0.9em; margin-bottom: 20px;">Register for classes at B2 Homa Bay Branch.</p>
+        <span id="close" style="float:right; cursor:pointer; font-size:35px; color:#999;">&times;</span>
+        <h2 style="color:var(--navy); margin-top:0; border-bottom: 2px solid var(--gold); padding-bottom: 10px;">Student Registration</h2>
         
-        <form action="https://formspree.io/f/mqaeveaz" method="POST" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Full Student Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="tel" name="phone" placeholder="WhatsApp Number" required>
+        <form action="https://formspree.io/f/xnjzwawl" method="POST" enctype="multipart/form-data">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required>
+            
+            <label>WhatsApp Number</label>
+            <input type="tel" name="phone" placeholder="+254..." required>
+            
+            <label>Select Course</label>
             <select name="course">
-                <option>Web Design & Hosting</option>
-                <option>Computer Maintenance</option>
-                <option>Networking Essentials</option>
+                <option>Web Development (12,000/-)</option>
+                <option>Computer Maintenance (8,500/-)</option>
+                <option>Networking Basics (10,000/-)</option>
             </select>
-            <label style="font-size: 11px; font-weight: bold;">Attach ID/Previous Certificates:</label>
-            <input type="file" name="doc" required>
-            <button type="submit" class="cta-button" style="font-size: 1.1em;">Confirm Registration</button>
+            
+            <label>Upload Document/ID (Photo or PDF)</label>
+            <input type="file" name="attachment" accept="image/*,.pdf" required>
+            
+            <button type="submit" class="cta-enroll" style="margin-top: 20px;">Submit Application</button>
         </form>
     </div>
 </div>
 
 <script>
     const m = document.getElementById("enrollModal");
-    const b = document.getElementById("regBtn");
+    const b = document.getElementById("openForm");
     const s = document.getElementById("close");
     b.onclick = () => m.style.display = "block";
     s.onclick = () => m.style.display = "none";
