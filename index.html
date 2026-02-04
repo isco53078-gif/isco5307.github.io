@@ -3,108 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IscoTech Academy | Homa Bay Town</title>
+    <title>IscoTech Academy & Career Hub</title>
     <style>
-        :root { --navy: #000814; --gold: #ffc300; --accent: #003566; --white: #ffffff; }
-        body { font-family: 'Poppins', sans-serif; background: var(--navy); color: var(--white); margin: 0; padding: 0; }
-        .address-bar { background: var(--gold); color: var(--navy); padding: 12px; font-weight: 800; text-align: center; position: sticky; top: 0; z-index: 1000; font-size: 0.9em; border-bottom: 2px solid #fff; }
-        header { background: linear-gradient(rgba(0,8,20,0.9), rgba(0,8,20,0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80'); padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--gold); }
-        .logo-text { font-size: 2.2em; font-weight: 800; color: var(--gold); margin: 0; }
-        .container { padding: 20px; max-width: 800px; margin: auto; }
-        .info-box { background: rgba(255,195,0,0.1); border: 1px dashed var(--gold); padding: 15px; border-radius: 12px; margin-bottom: 25px; text-align: left; }
-        .course-box { background: var(--accent); margin-bottom: 12px; border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,195,0,0.2); }
-        .course-btn { width: 100%; padding: 20px; background: none; border: none; color: var(--gold); text-align: left; font-size: 1.1em; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; }
-        .course-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: rgba(0,0,0,0.3); }
-        .inner { padding: 20px; font-size: 0.95em; }
-        .cta-btn { display: block; background: linear-gradient(45deg, #ffc300, #ff9500); color: var(--navy); padding: 20px; text-decoration: none; border-radius: 50px; font-weight: 800; font-size: 1.3em; text-align: center; margin: 30px 0; cursor: pointer; border: none; width: 100%; box-shadow: 0 5px 15px rgba(255,195,0,0.4); }
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
-        .modal-content { background: #fff; color: #222; margin: 5% auto; padding: 30px; width: 85%; max-width: 420px; border-radius: 25px; }
-        input, select, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 2px solid #f1f5f9; border-radius: 12px; box-sizing: border-box; }
+        :root { --navy: #000814; --gold: #ffc300; --mpesa: #28a745; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; color: #333; line-height: 1.6; }
+        
+        /* Header */
+        header { background: var(--navy); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--gold); }
+        .logo { font-size: 2em; font-weight: 800; color: var(--gold); margin: 0; }
+        
+        .container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+        
+        /* Cards */
+        .section-card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        h2 { color: var(--navy); border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 15px; }
+        
+        /* Payment Gate */
+        .lock-overlay { background: #fffdf0; border: 2px dashed #e67e22; padding: 15px; border-radius: 15px; margin-top: 10px; text-align: center; }
+        .till-badge { background: var(--mpesa); color: white; padding: 10px 20px; border-radius: 10px; font-size: 1.5em; font-weight: 900; display: block; margin: 10px 0; }
+        
+        /* UI Elements */
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; }
+        .btn { width: 100%; padding: 15px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 1em; transition: 0.3s; }
+        .btn-navy { background: var(--navy); color: white; }
+        .btn-mpesa { background: var(--mpesa); color: white; }
+        
+        /* Hidden Sections */
+        .hidden-content { display: none; background: #f9f9f9; padding: 15px; border-radius: 10px; border-left: 5px solid var(--mpesa); margin-top: 15px; }
+        
+        .job-item { background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-<div class="address-bar">📍 HOMA BAY TOWN, OPPOSITE EQUITY BANK (B2)</div>
-
 <header>
-    <h1 class="logo-text">ISCOTECH ACADEMY</h1>
-    <p>Empowering Homa Bay through Technology</p>
+    <p class="logo">ISCOTECH HUB</p>
+    <p>Academy | Career AI | Employment</p>
+    <small>📍 Homa Bay Town, Opposite Equity Bank</small>
 </header>
 
 <div class="container">
-    <div class="info-box">
-        <h4 style="margin:0; color:var(--gold);">🕒 Teaching Hours:</h4>
-        <p style="margin:5px 0; font-size:0.9em;"><b>Full Day Classes (8:00 AM - 5:00 PM)</b>. Choose your hours!</p>
-    </div>
 
-    <h3 style="text-align:left; color:var(--gold);">Available Courses (Tap to View):</h3>
+    <div class="section-card">
+        <h2>🏫 Academy Courses</h2>
+        <p>We offer expert training in Python, Web Design, and ICT Technical Skills.</p>
+        
+        <div id="academyLock" class="lock-overlay">
+            <p style="margin:0; font-weight:bold; color:#e67e22;">🔒 UNLOCK COURSE DETAILS</p>
+            <small>Pay <b>20/-</b> to see full units & timings</small>
+            <span class="till-badge">TILL: 448941</span>
+            <input type="text" id="code1" placeholder="Enter M-PESA Code">
+            <button class="btn btn-mpesa" onclick="unlock('academy')">Verify & Unlock</button>
+        </div>
 
-    <div class="course-box">
-        <button class="course-btn" onclick="triggerMoney()">🐍 Python Programming <span>▼</span></button>
-        <div class="course-content">
-            <div class="inner">Skills: Logic, AI Bots, and Desktop Applications.</div>
+        <div id="academyContent" class="hidden-content">
+            <p>✅ <b>Python:</b> Logic, AI Bots, Django (3 Months)</p>
+            <p>✅ <b>Web Design:</b> HTML5, CSS3, JS, GitHub (2 Months)</p>
+            <p>✅ <b>ICT Tech:</b> Hardware, Networking, OS (4 Months)</p>
+            <a href="https://wa.me/254746939408" class="btn btn-navy" style="text-decoration:none; display:block; text-align:center;">Chat with Instructor</a>
         </div>
     </div>
 
-    <div class="course-box">
-        <button class="course-btn" onclick="triggerMoney()">🌐 JavaScript & Web Design <span>▼</span></button>
-        <div class="course-content">
-            <div class="inner">Skills: Responsive UI, Interactive JS, and GitHub.</div>
+    <div class="section-card">
+        <h2>🚀 Career AI Placement</h2>
+        <p>Not sure which University or College to join? Let our AI analyze your grades.</p>
+        
+        <input type="text" id="stuName" placeholder="Student Full Name">
+        <select id="meanGrade">
+            <option value="">Select Mean Grade</option>
+            <option>A</option><option>B</option><option>C</option><option>D</option>
+        </select>
+
+        <div id="careerLock" class="lock-overlay">
+            <p style="margin:0; font-weight:bold; color:#e67e22;">🔒 UNLOCK AI REPORT</p>
+            <small>Pay <b>20/-</b> to generate your roadmap</small>
+            <span class="till-badge">TILL: 448941</span>
+            <input type="text" id="code2" placeholder="Enter M-PESA Code">
+            <button class="btn btn-mpesa" onclick="unlock('career')">Get My Roadmap</button>
+        </div>
+
+        <div id="careerContent" class="hidden-content">
+            <h4 id="reportTitle"></h4>
+            <p id="reportMsg" style="font-weight:bold; color:var(--mpesa);"></p>
+            <p>Visit us in Homa Bay for the full printed certificate.</p>
         </div>
     </div>
 
-    <div class="course-box">
-        <button class="course-btn" onclick="triggerMoney()">🔧 Technical ICT Skills <span>▼</span></button>
-        <div class="course-content">
-            <div class="inner">Skills: Hardware Repair, Networking, and OS setup.</div>
+    <div class="section-card">
+        <h2>💼 Employment Portal</h2>
+        <p>Latest vacancies for Diploma in ICT & Computer Science students.</p>
+
+        <div id="jobLock" class="lock-overlay">
+            <p style="margin:0; font-weight:bold; color:#e67e22;">🔒 UNLOCK VACANCIES</p>
+            <small>Pay <b>20/-</b> to see job requirements & apply</small>
+            <span class="till-badge">TILL: 448941</span>
+            <input type="text" id="code3" placeholder="Enter M-PESA Code">
+            <button class="btn btn-mpesa" onclick="unlock('job')">See Available Jobs</button>
+        </div>
+
+        <div id="jobContent" class="hidden-content">
+            <div class="job-item">
+                <b>ICT Support (Homa Bay)</b><br>
+                <small>Salary: 35k | Req: Diploma</small>
+            </div>
+            <div class="job-item">
+                <b>Junior Web Dev (Remote)</b><br>
+                <small>Salary: 25k | Req: GitHub Portfolio</small>
+            </div>
+            <a href="https://wa.me/254746939408" class="btn btn-navy" style="text-decoration:none; display:block; text-align:center;">Contact Employer</a>
         </div>
     </div>
 
-    <button class="cta-btn" onclick="triggerMoney('form')">Register Now</button>
-</div>
-
-<div id="enrollModal" class="modal">
-    <div class="modal-content">
-        <span id="close" style="float:right; cursor:pointer; font-size:35px; color:#aaa;">&times;</span>
-        <h2 style="color:var(--navy); margin:0;">Application Form</h2>
-        <form action="https://formspree.io/f/xnjzwawl" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="tel" name="phone" placeholder="WhatsApp Number" required>
-            <textarea name="timing" placeholder="Preferred Study Hours" rows="2" required></textarea>
-            <select name="course">
-                <option>Python Development</option>
-                <option>JavaScript & Web</option>
-                <option>Technical ICT Skills</option>
-            </select>
-            <button type="submit" class="cta-btn" style="width:100%; border:none;">Submit Details</button>
-        </form>
-    </div>
 </div>
 
 <script>
-    // 1. Money Function
-    function triggerMoney(type) {
-        // Opens the Ad instantly
-        window.open("https://otieu.com/4/10560010", "_blank");
-        
-        // If they clicked "Register", show the form
-        if(type === 'form') {
-            setTimeout(() => { document.getElementById("enrollModal").style.display = "block"; }, 1000);
+    function unlock(section) {
+        let codeInput = "";
+        if(section === 'academy') codeInput = document.getElementById('code1').value;
+        if(section === 'career') codeInput = document.getElementById('code2').value;
+        if(section === 'job') codeInput = document.getElementById('code3').value;
+
+        if(codeInput.length < 5) {
+            alert("Please enter a valid M-PESA transaction code.");
+            return;
         }
-    }
 
-    // 2. Accordion Logic
-    var acc = document.getElementsByClassName("course-btn");
-    for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-        });
-    }
+        // Logic for Career AI results
+        if(section === 'career') {
+            let name = document.getElementById('stuName').value;
+            let grade = document.getElementById('meanGrade').value;
+            if(!name || !grade) { alert("Enter Name and Grade first!"); return; }
+            
+            document.getElementById('reportTitle').innerText = "Placement Report: " + name;
+            document.getElementById('reportMsg').innerText = (grade === "A" || grade === "B") 
+                ? "Recommended: Bachelor of Science in Software Engineering (JKUAT/UoN)" 
+                : "Recommended: Diploma in ICT & Cyber Security (Homa Bay Poly)";
+        }
 
-    document.getElementById("close").onclick = () => { document.getElementById("enrollModal").style.display = "none"; }
+        // Show Content & Hide Lock
+        document.getElementById(section + 'Lock').style.display = "none";
+        document.getElementById(section + 'Content').style.display = "block";
+    }
 </script>
 
+<footer style="text-align:center; padding:20px; color:#777; font-size:0.8em;">
+    © 2026 IscoTech Academy | Homa Bay Town <br>
+    Built by IscoTech IT Department
+</footer>
+
 </body>
-</html>
+    </html>
+    
