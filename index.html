@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IscoTech Hub | Digital Solutions Portal</title>
+    <title>IscoTech Hub | Official 3-Department Portal</title>
     <style>
         :root { --navy: #000814; --gold: #ffc300; --mpesa: #28a745; --light: #f4f7f6; }
         body { font-family: 'Poppins', sans-serif; background: var(--light); margin: 0; color: #333; line-height: 1.6; }
@@ -18,11 +18,8 @@
         table { width: 100%; border-collapse: collapse; font-size: 0.9em; margin-top: 10px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background: var(--navy); color: white; }
-        
-        /* Automation Styles */
-        #ai-result-box { display: none; margin-top: 20px; padding: 20px; background: #d4edda; border-radius: 10px; border-left: 5px solid var(--mpesa); animation: fadeIn 0.5s; }
-        .pay-step { background: #fff3cd; padding: 15px; border-radius: 10px; border: 1px solid #ffeeba; margin-bottom: 15px; text-align: center; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .pay-step { background: #fff3cd; padding: 15px; border-radius: 10px; border: 1px solid #ffeeba; text-align: center; margin-bottom: 15px; }
+        #ai-result-box { display: none; margin-top: 20px; padding: 20px; background: #d4edda; border-radius: 10px; border-left: 5px solid var(--mpesa); }
     </style>
 </head>
 <body>
@@ -30,7 +27,7 @@
 <header>
     <h1>ISCOTECH HUB</h1>
     <p style="color:var(--gold);">Innovation | Career AI | Government Placements</p>
-    <p>Homa Bay & Online | ☀️ Day & 🌙 Night Shifts</p>
+    <p>☀️ Day Shift | 🌙 Night Shift (Online)</p>
 </header>
 
 <div class="container">
@@ -38,111 +35,107 @@
     <h2 class="dept-title">1. IscoTech Academy</h2>
     <div class="card">
         <div class="content-area">
-            <h3>Course Fee Structure</h3>
+            <h3>ICT & Coding Courses</h3>
             <table>
                 <tr><th>Course</th><th>Duration</th><th>Online Fee</th></tr>
                 <tr><td>Full-Stack Dev</td><td>4 Months</td><td>4,200/-</td></tr>
                 <tr><td>Python Coding</td><td>3 Months</td><td>2,500/-</td></tr>
                 <tr><td>Web Engineering</td><td>2 Months</td><td>2,200/-</td></tr>
                 <tr><td>ICT Masterclass</td><td>1 Month</td><td>2,800/-</td></tr>
+                <tr><td>Graphic Design</td><td>6 Weeks</td><td>1,400/-</td></tr>
+                <tr><td>Smartphone Tech</td><td>2 Weeks</td><td>500/-</td></tr>
                 <tr><td>AI Speed Lessons</td><td>1 Week</td><td>400/-</td></tr>
             </table>
-            <p><i>*6 more courses available. Registration: 50/-*</i></p>
         </div>
         <div class="form-area">
             <h4>Enrollment Form</h4>
             <input type="text" placeholder="Full Name">
             <input type="text" placeholder="WhatsApp Number">
-            <input type="email" placeholder="Active Email">
-            <button class="btn" onclick="location.href='https://wa.me/254746939408?text=I%20want%20to%20enroll'">Submit & Pay 50/-</button>
+            <p style="font-size: 0.8em;">Pay <b>50/-</b> Reg Fee to <b>0746939408</b></p>
+            <button class="btn" onclick="location.href='https://wa.me/254746939408'">Submit & Pay 50/-</button>
         </div>
     </div>
 
-    <h2 class="dept-title">2. KRA (Caribbean) & Placements</h2>
+    <h2 class="dept-title">2. KRA (Caribbean) & KUCCPS</h2>
     <div class="card">
         <div class="content-area">
-            <h3>KUCCPS, HEF & KRA</h3>
-            <p>Fast generation for KRA PINs and College Placements. Cheaper and error-free.</p>
+            <h3>Government Services</h3>
+            <p>Fast KRA PIN generation, recovery, and KUCCPS/HEF placement services.</p>
             <p><b>Required:</b> ID Number, Active Email, P.O. Box Address.</p>
         </div>
         <div class="form-area">
-            <h4>Request Service</h4>
+            <h4>Service Request</h4>
             <input type="text" placeholder="Full Name">
             <input type="text" placeholder="ID Number">
-            <input type="text" placeholder="P.O. Box & Town">
-            <button class="btn" onclick="location.href='https://wa.me/254746939408?text=KRA_Placement_Help'">Process Service (20/-)</button>
+            <button class="btn" onclick="location.href='https://wa.me/254746939408?text=KRA_Help'">Start Validation (20/-)</button>
         </div>
     </div>
 
     <h2 class="dept-title">3. Automated Career AI Analysis</h2>
     <div class="card">
         <div class="content-area">
-            <h3>"Get Your Roadmap Instantly"</h3>
-            
+            <h3>Deep Molecule Analysis</h3>
             <div class="pay-step">
                 <strong>Step 1: Pay Analysis Fee</strong>
-                <p>M-PESA: <b>0746939408</b> (Director)<br>Amount: <b>KES 20</b></p>
+                <p>M-PESA: <b>0746939408</b> | Amount: <b>KES 50</b></p>
             </div>
-
-            <label>Select Mean Grade:</label>
-            <select id="grade"><option value="">-- Choose Grade --</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select>
-            
-            <label>Your Strongest Subject Molecule:</label>
-            <select id="sub"><option value="">-- Choose Subject --</option><option value="Med">Biology/Chemistry</option><option value="Tech">Math/Physics</option><option value="Arts">English/Arts</option></select>
-            
-            <label>M-PESA Transaction Code:</label>
-            <input type="text" id="mpesaCode" placeholder="Enter M-Pesa Code (e.g. TCR4...)">
-
-            <button class="btn" style="background:var(--navy); margin-top:10px;" onclick="unlockResult()">UNLOCK MY RESULTS</button>
+            <label>Exact Mean Grade:</label>
+            <select id="meanGrade">
+                <option value="">-- Choose Grade --</option>
+                <option value="A/B">A or B</option>
+                <option value="C+">C+</option><option value="C">C (Plain)</option><option value="C-">C-</option>
+                <option value="D">D</option><option value="E">E</option>
+            </select>
+            <label>Subject Strength:</label>
+            <select id="subjectMolecule">
+                <option value="">-- Choose Strength --</option>
+                <option value="Biology">Biology/Chem</option>
+                <option value="Math">Math/Physics</option>
+                <option value="Arts">English/Business</option>
+            </select>
+            <input type="text" id="txnCode" placeholder="M-Pesa Transaction Code">
+            <button class="btn" style="background:var(--navy); margin-top:10px;" onclick="runAnalysis()">UNLOCK 6-7 RECOMMENDATIONS</button>
 
             <div id="ai-result-box">
-                <h3 style="margin-top:0;">Analysis Results Unlocked!</h3>
-                <p id="path-text"></p>
-                <p style="font-size:0.85em; border-top:1px solid #ccc; padding-top:10px;">
-                    <b>Official Recommendation:</b> Visit IscoTech Hub in Homa Bay or join our Night Shift Online classes to start this career.
-                </p>
+                <h3 style="margin-top:0;">Top Career Recommendations:</h3>
+                <ul id="analysisOutput" style="line-height:1.8;"></ul>
             </div>
         </div>
         <div class="form-area">
-            <h4>Submit for Full Roadmap</h4>
+            <h4>Record Details</h4>
             <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="WhatsApp Number">
-            <input type="email" placeholder="Active Email">
-            <button class="btn">Send Full PDF Report</button>
+            <input type="text" placeholder="WhatsApp">
+            <button class="btn">Save Results</button>
         </div>
     </div>
 
 </div>
 
-<footer style="background: var(--navy); color: white; text-align: center; padding: 20px; margin-top: 40px;">
-    <p>&copy; 2026 IscoTech Hub | Homa Bay & Online</p>
-</footer>
-
 <script>
-    function unlockResult() {
-        const grade = document.getElementById('grade').value;
-        const sub = document.getElementById('sub').value;
-        const code = document.getElementById('mpesaCode').value;
+function runAnalysis() {
+    const grade = document.getElementById('meanGrade').value;
+    const molecule = document.getElementById('subjectMolecule').value;
+    const txn = document.getElementById('txnCode').value;
+    if (!grade || !molecule || !txn) { alert("Please enter all details and the 50/- code."); return; }
 
-        if(!grade || !sub || !code) {
-            alert("Please select your grade, subject, and enter your M-Pesa code to unlock results.");
-            return;
-        }
-
-        const pathText = document.getElementById('path-text');
-        
-        if(sub === 'Med') {
-            pathText.innerHTML = "Based on your <b>Grade " + grade + "</b> and strength in Biology, you are a perfect candidate for <b>Medical Sciences, Clinical Medicine, or Nursing</b>. You have the 'molecules' for a healthcare hero.";
-        } else if(sub === 'Tech') {
-            pathText.innerHTML = "With <b>Grade " + grade + "</b> and strength in Mathematics, you are built for <b>Software Engineering, ICT, or Architecture</b>. You should join our Full-Stack Academy course.";
-        } else {
-            pathText.innerHTML = "Your <b>Grade " + grade + "</b> shows creative and linguistic strength. You are suited for <b>Law, Media Studies, or Digital Marketing</b>.";
-        }
-
-        document.getElementById('ai-result-box').style.display = 'block';
+    let courses = [];
+    if (grade === "C") {
+        if (molecule === "Biology") courses = ["Dip. Clinical Medicine", "Dip. Nursing", "Dip. Pharmacy", "Dip. Medical Imaging", "Dip. Physiotherapy", "Dip. Dental Tech"];
+        else if (molecule === "Math") courses = ["Dip. Civil Engineering", "Dip. Electrical Engineering", "Dip. ICT", "Dip. Architecture", "Dip. Software Engineering", "Dip. Quantity Surveying"];
+        else courses = ["Dip. Business Admin", "Dip. Journalism", "Dip. Hospitality", "Dip. Accounting", "Dip. Social Work", "Dip. Procurement"];
+    } else if (grade === "C-") {
+        courses = ["Dip. Health Records", "Dip. Community Health", "Dip. Nutrition", "Dip. Building Tech", "Dip. Automotive Engineering", "Cert. in ICT & Coding"];
+    } else if (grade === "A/B") {
+        courses = ["Medicine & Surgery", "Aeronautical Engineering", "Law (LLB)", "Pharmacy (Degree)", "Data Science", "Architecture"];
+    } else {
+        courses = ["Cert. in Plumbing", "Cert. in Automotive", "Cert. in Electrical", "Cert. in Masonry", "Cert. in Hairdressing", "Cert. in Food & Bev"];
     }
-</script>
 
+    const output = document.getElementById('analysisOutput');
+    output.innerHTML = "";
+    courses.forEach(c => { output.innerHTML += "<li><b>" + c + "</b></li>"; });
+    document.getElementById('ai-result-box').style.display = "block";
+}
+</script>
 </body>
-    </html>
-    
+</html>
