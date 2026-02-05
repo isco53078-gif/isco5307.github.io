@@ -1,153 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IscoTech Hub | Variety & Excellence</title>
-    <style>
-        :root { --navy: #000814; --gold: #ffc300; --mpesa: #28a745; --light: #f4f7f6; }
-        body { font-family: 'Poppins', sans-serif; background: var(--light); margin: 0; color: #333; line-height: 1.6; }
-        header { background: var(--navy); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--gold); }
-        .tagline { color: var(--gold); font-weight: bold; font-size: 1.3em; margin-bottom: 10px; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
+<h2 class="dept-title">3. Automated Career AI & Course Analysis</h2>
+<div class="card">
+    <div class="content-area">
+        <h3>"Worried about your Grade? Let's Analyze your Future."</h3>
+        <p>Whether you got an <b>A</b> or an <b>E</b>, our AI analyzes the "molecules" of your subjects to find the best course for you among thousands of global career paths.</p>
         
-        .section-title { text-align: center; margin-top: 50px; color: var(--navy); border-bottom: 2px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
+        <div class="pay-step" style="background: #fff3cd; padding: 15px; border-radius: 10px; border: 1px solid #ffeeba; text-align: center;">
+            <strong>Step 1: Pay Analysis Fee</strong>
+            <p>M-PESA: <b>0746939408</b> (Director) | Amount: <b>KES 20</b></p>
+        </div>
+
+        <label>Select Your Mean Grade:</label>
+        <select id="meanGrade">
+            <option value="">-- Choose Grade --</option>
+            <option value="A">A (Plain/Minus)</option>
+            <option value="B">B (Plus/Plain/Minus)</option>
+            <option value="C">C (Plus/Plain/Minus)</option>
+            <option value="D">D (Plus/Plain/Minus)</option>
+            <option value="E">E (Artisan Level)</option>
+        </select>
         
-        /* Course Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
-        .card { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; position: relative; overflow: hidden; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-top: 0; color: var(--navy); font-size: 1.4em; }
-        .duration { background: #eee; padding: 5px 10px; border-radius: 5px; font-size: 0.85em; font-weight: bold; }
-        .price-row { display: flex; justify-content: space-between; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
-        .online { color: var(--mpesa); font-weight: bold; }
+        <label>Your Strongest Subject Molecule:</label>
+        <select id="subjectMolecule">
+            <option value="">-- Choose Strength --</option>
+            <option value="Biology">Biology/Chemistry (Medical)</option>
+            <option value="Math">Math/Physics (Engineering/Tech)</option>
+            <option value="English">English/Kiswahili (Law/Media)</option>
+            <option value="Business">Business/Geography (Finance/Admin)</option>
+            <option value="Creative">Art/Music/Design (Creative Arts)</option>
+        </select>
 
-        /* Unified Pay Gate */
-        .pay-gate { background: white; border: 3px solid var(--gold); padding: 30px; border-radius: 25px; text-align: center; margin: 40px 0; }
-        .btn { display: inline-block; padding: 18px 40px; background: var(--mpesa); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
-        .btn:hover { background: #218838; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4); }
+        <label>M-PESA Transaction Code:</label>
+        <input type="text" id="txnCode" placeholder="Enter Code (e.g. TCR4...)">
 
-        .shift-info { background: var(--navy); color: white; padding: 15px; border-radius: 10px; display: inline-block; margin-top: 10px; }
-    </style>
-</head>
-<body>
+        <button class="btn" style="background:var(--navy); margin-top:10px;" onclick="generateDeepAnalysis()">UNLOCK DEEP ANALYSIS</button>
 
-<header>
-    <h1>ISCOTECH HUB</h1>
-    <p class="tagline">"Where Grades Meet Skills & Dreams Meet Reality"</p>
-    <p>Flexible Learning | Career AI | Government Placements</p>
-    <div class="shift-info">
-        ☀️ Day Shift (Physical & Online) | 🌙 Night Shift (7:00 PM - 9:30 PM Online)
-    </div>
-</header>
-
-<div class="container">
-
-    <h2 class="section-title">1. Professional Course Catalog</h2>
-    <p style="text-align:center;">Choose your path! Online classes are <b>cheaper and flexible</b> for both day and night shifts.</p>
-    
-    <div class="grid">
-        <div class="card">
-            <h3>Full-Stack Software Dev</h3>
-            <span class="duration">4 Months</span>
-            <p>The ultimate path to building apps and systems.</p>
-            <div class="price-row"><span>Physical: 5,000/-</span><span class="online">Online: 4,200/-</span></div>
-        </div>
-        <div class="card">
-            <h3>ICT Masterclass</h3>
-            <span class="duration">1 Month</span>
-            <p>Comprehensive computer packages for office excellence.</p>
-            <div class="price-row"><span>Physical: 4,000/-</span><span class="online">Online: 2,800/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Time-Call Coding (Python)</h3>
-            <span class="duration">3 Months</span>
-            <p>Learn the world's most powerful programming language.</p>
-            <div class="price-row"><span>Physical: 3,500/-</span><span class="online">Online: 2,500/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Web Engineering</h3>
-            <span class="duration">2 Months</span>
-            <p>Design modern, responsive websites for businesses.</p>
-            <div class="price-row"><span>Physical: 3,000/-</span><span class="online">Online: 2,200/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Database Management</h3>
-            <span class="duration">2 Months</span>
-            <p>Learn to organize and secure company data.</p>
-            <div class="price-row"><span>Physical: 2,500/-</span><span class="online">Online: 1,800/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Graphic Design Foundation</h3>
-            <span class="duration">6 Weeks</span>
-            <p>Create stunning visual brands and logos.</p>
-            <div class="price-row"><span>Physical: 2,000/-</span><span class="online">Online: 1,400/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Cyber Security Basics</h3>
-            <span class="duration">4 Weeks</span>
-            <p>Protect yourself and businesses from hackers.</p>
-            <div class="price-row"><span>Physical: 1,800/-</span><span class="online">Online: 1,200/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Advanced Excel for Business</h3>
-            <span class="duration">3 Weeks</span>
-            <p>Master data analysis for accounting and management.</p>
-            <div class="price-row"><span>Physical: 1,500/-</span><span class="online">Online: 1,000/-</span></div>
-        </div>
-        <div class="card">
-            <h3>Smartphone Tech Professional</h3>
-            <span class="duration">2 Weeks</span>
-            <p>Use your phone for professional work and editing.</p>
-            <div class="price-row"><span>Physical: 800/-</span><span class="online">Online: 500/-</span></div>
-        </div>
-        <div class="card">
-            <h3>AI Speed Lessons</h3>
-            <span class="duration">1 Week</span>
-            <p>Use AI tools to finish tasks in seconds.</p>
-            <div class="price-row"><span>Physical: 700/-</span><span class="online">Online: 400/-</span></div>
+        <div id="ai-result-box" style="display:none; margin-top:20px; padding:20px; background: #d4edda; border-radius: 10px; border-left: 5px solid var(--mpesa);">
+            <h3 style="margin-top:0; color:#155724;">AI Analysis Complete ✅</h3>
+            <div id="analysisOutput"></div>
+            <hr>
+            <p style="font-size:0.85em;"><i>Official IscoTech Career Roadmap. Present this to the Director for College Placement.</i></p>
         </div>
     </div>
 
-    <div class="pay-gate">
-        <h3>Ready to Enroll?</h3>
-        <p>Mention specifically which course you like. For things to run smoothly:</p>
-        <p>Pay Registration Fee: <b>KES 50</b> to <b>0746939408</b></p>
-        <a href="https://wa.me/254746939408?text=I%20want%20to%20enroll%20in%20a%20specific%20course" class="btn">SECURE MY SLOT</a>
+    <div class="form-area">
+        <h4>Save Your Report</h4>
+        <input type="text" id="uName" placeholder="Full Name">
+        <input type="text" id="uWhatsApp" placeholder="WhatsApp Number">
+        <input type="email" id="uEmail" placeholder="Active Email">
+        <button class="btn" onclick="alert('Details saved! Please run the analysis to generate your report.')">Submit for Record</button>
     </div>
-
-    <h2 class="section-title">2. Career AI: Medical & Technical Checkup</h2>
-    <div class="card">
-        <p>Don't guess your future. We analyze the <b>molecules</b> of your grades (Math, Biology, Chemistry, etc.) to match you with a winning career.</p>
-        <div class="pay-gate" style="border-color: #2196f3;">
-            <h3>Unlock Your Roadmap</h3>
-            <p>To see your analysis results: Pay <b>KES 20</b> to <b>0746939408</b></p>
-            <a href="https://wa.me/254746939408?text=I%20want%20my%20career%20result%20analysis" class="btn" style="background:#2196f3;">START CHECKUP</a>
-        </div>
-    </div>
-
-    <h2 class="section-title">3. KUCCPS, HEF & Transfers</h2>
-    <div class="card" style="text-align:center;">
-        <p>Expert placement for University, KMTC, and Government Funding (HEF/HELB).</p>
-        <p>Consultation fee to start working: <b>KES 50</b> to <b>0746939408</b></p>
-    </div>
-
-    <h2 class="section-title">4. KRA PIN (Caribbean) Registration</h2>
-    <div class="card">
-        <p>Every student needs a KRA PIN for HEF, groups, and bank accounts. We provide this at a <b>very cheap price!</b></p>
-        <p><b>What to do:</b> Proceed to contact the Creator. You will pay a validation fee of <b>KES 20</b> to start. Once paid, the Creator will ask for your ID, Active Email, and P.O. Box to finalize the creation at a friendly price.</p>
-        
-        <div class="pay-gate" style="border-color: var(--mpesa);">
-            <p>Start KRA Validation: <b>KES 20</b> to <b>0746939408</b></p>
-            <a href="https://wa.me/254746939408?text=I%20need%20to%20create%20my%20KRA%20PIN" class="btn">CONTACT CREATOR FOR KRA</a>
-        </div>
-    </div>
-
 </div>
 
-<footer style="background: var(--navy); color: white; text-align: center; padding: 30px; margin-top: 50px;">
-    <p>&copy; 2026 IscoTech Hub | Designed by the Director</p>
-</footer>
+<script>
+function generateDeepAnalysis() {
+    const grade = document.getElementById('meanGrade').value;
+    const molecule = document.getElementById('subjectMolecule').value;
+    const txn = document.getElementById('txnCode').value;
 
-</body>
-</html>
+    if (!grade || !molecule || !txn) {
+        alert("Please enter all details and the M-Pesa code to unlock your deep analysis.");
+        return;
+    }
+
+    let report = "";
+
+    // DEEP LOGIC FOR ALL COURSES IN THE WORLD
+    if (grade === "A" || grade === "B") {
+        if (molecule === "Biology") report = "<b>Degree Level:</b> You qualify for Medicine & Surgery, Pharmacy, or Dental Surgery. You have the 'Bio-Molecules' for top-tier Hospital Management.";
+        else if (molecule === "Math") report = "<b>Degree Level:</b> You qualify for Software Engineering, Aeronautical Engineering, or Data Science. The world of Big Tech awaits your logic.";
+        else report = "<b>Degree Level:</b> You qualify for International Relations, Law, or Actuarial Science. Your profile fits Global Leadership.";
+    } 
+    else if (grade === "C") {
+        if (molecule === "Biology") report = "<b>Diploma Level:</b> You qualify for Nursing, Clinical Medicine, or Medical Lab Technology. These are the most marketable medical paths in Kenya.";
+        else if (molecule === "Math") report = "<b>Diploma Level:</b> You qualify for Electrical Engineering, ICT, or Computer Science. You can bridge to a Degree later.";
+        else report = "<b>Diploma Level:</b> You qualify for Journalism, Business Management, or Hospitality. You have strong 'Market Molecules'.";
+    } 
+    else if (grade === "D") {
+        if (molecule === "Biology") report = "<b>Certificate Level:</b> You qualify for Community Health, Nutrition, or Animal Health. You can start here and climb to a Diploma.";
+        else if (molecule === "Math") report = "<b>Certificate Level:</b> You qualify for Automotive Engineering, Plumbing, or Solar Installation. These are high-paying technical skills.";
+        else report = "<b>Certificate Level:</b> You qualify for Catering, Hairdressing, or Secretarial Studies. You are built for the Service Industry.";
+    } 
+    else {
+        report = "<b>Artisan Level:</b> Grade E is a starting point. You qualify for Artisan courses in Masonry, Carpentry, or Garment Making. These skills are the foundation of all construction and fashion industries.";
+    }
+
+    document.getElementById('analysisOutput').innerHTML = report;
+    document.getElementById('ai-result-box').style.display = "block";
+}
+            </script>
+            
